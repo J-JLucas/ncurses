@@ -10,7 +10,9 @@
 int main()
 {
     initscr();			// initScreen; starts curses mode
+    attron(A_BOLD);		// Attribute "BOLD" on
     printw("Hello ncurses!");	// print to "buffer" screen
+    attroff(A_BOLD);		// Attribute "BOLD" off
     refresh();			// print "buffer" screen to real screen
     getch();			// hang screen for input so we can see
     endwin();			// endWindow? exits curses mode
